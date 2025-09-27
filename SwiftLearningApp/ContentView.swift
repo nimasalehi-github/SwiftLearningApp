@@ -30,6 +30,12 @@ struct ContentView: View {
     // Stored Property → مقداری که مستقیم توی حافظه نگه‌داری میشه
     var name: String = "Nima"
     
+    // Computed Property → هر بار که بهش دسترسی پیدا می‌کنیم محاسبه می‌شود
+    var greeting: String {
+        return "Hello, \(name)! Welcome to SwiftUI"
+    }
+
+    
     var body: some View {
         VStack { // چندتا ویو رو عمودی می‌چینه
             Text("Hello, world!")
@@ -37,6 +43,10 @@ struct ContentView: View {
             
             // از پراپرتی استفاده می‌کنیم
             Text("My name is \(name)")
+            
+            Text(greeting)
+                .foregroundColor(.blue) // رنگ متن آبی شود
+
         }
     }
 }
