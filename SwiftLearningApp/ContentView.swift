@@ -34,6 +34,10 @@ struct ContentView: View {
     var greeting: String {
         return "Hello, \(name)! Welcome to SwiftUI"
     }
+    
+    // Static Property → مربوط به خود struct هست، نه به نمونه (instance)
+    static let appVersion: String = "1.0"
+
 
     
     var body: some View {
@@ -47,6 +51,15 @@ struct ContentView: View {
             Text(greeting)
                 .foregroundColor(.blue) // رنگ متن آبی شود
 
+            Text("App Version: \(ContentView.appVersion)")
+                .foregroundColor(.green)
+
         }
+    }
+}
+
+struct Previews_ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
