@@ -33,6 +33,7 @@ class Cat: Animal, Describable {
         return "Meow! 🐱"
     }
     
+    // پیاده‌سازی Describable
     var description: String {
         return "This is a Cat named \(name)"
     }

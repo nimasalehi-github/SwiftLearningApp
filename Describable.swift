@@ -6,12 +6,11 @@
 //
 
 import Foundation
-// پروتکل ما
 
-import Foundation
-
+// پروتکل Describable
 protocol Describable {
     var description: String { get }
     func details() -> String
 }
+
 
