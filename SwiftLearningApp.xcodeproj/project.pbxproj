@@ -10,6 +10,9 @@
 		F991ADBD2E89464D008E5575 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991ADBC2E89464D008E5575 /* Describable.swift */; };
 		F991ADBE2E89464D008E5575 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991ADBC2E89464D008E5575 /* Describable.swift */; };
 		F991ADBF2E89464D008E5575 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991ADBC2E89464D008E5575 /* Describable.swift */; };
+		F991ADC12E899728008E5575 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991ADC02E899728008E5575 /* Animal.swift */; };
+		F991ADC22E899728008E5575 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991ADC02E899728008E5575 /* Animal.swift */; };
+		F991ADC32E899728008E5575 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991ADC02E899728008E5575 /* Animal.swift */; };
 		F99557362E88668F0063CE6F /* SwiftLearningAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99557352E88668F0063CE6F /* SwiftLearningAppApp.swift */; };
 		F99557382E88668F0063CE6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99557372E88668F0063CE6F /* ContentView.swift */; };
 		F995573A2E8866950063CE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99557392E8866950063CE6F /* Assets.xcassets */; };
@@ -38,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		F991ADBC2E89464D008E5575 /* Describable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Describable.swift; sourceTree = "<group>"; };
+		F991ADC02E899728008E5575 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		F99557322E88668F0063CE6F /* SwiftLearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99557352E88668F0063CE6F /* SwiftLearningAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningAppApp.swift; sourceTree = "<group>"; };
 		F99557372E88668F0063CE6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		F99557292E88668F0063CE6F = {
 			isa = PBXGroup;
 			children = (
+				F991ADC02E899728008E5575 /* Animal.swift */,
 				F991ADBC2E89464D008E5575 /* Describable.swift */,
 				F99557342E88668F0063CE6F /* SwiftLearningApp */,
 				F99557452E8866960063CE6F /* SwiftLearningAppTests */,
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F991ADBD2E89464D008E5575 /* Describable.swift in Sources */,
+				F991ADC12E899728008E5575 /* Animal.swift in Sources */,
 				F99557382E88668F0063CE6F /* ContentView.swift in Sources */,
 				F99557362E88668F0063CE6F /* SwiftLearningAppApp.swift in Sources */,
 			);
@@ -274,6 +280,7 @@
 			files = (
 				F991ADBE2E89464D008E5575 /* Describable.swift in Sources */,
 				F99557472E8866960063CE6F /* SwiftLearningAppTests.swift in Sources */,
+				F991ADC22E899728008E5575 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F991ADBF2E89464D008E5575 /* Describable.swift in Sources */,
+				F991ADC32E899728008E5575 /* Animal.swift in Sources */,
 				F99557532E8866960063CE6F /* SwiftLearningAppUITestsLaunchTests.swift in Sources */,
 				F99557512E8866960063CE6F /* SwiftLearningAppUITests.swift in Sources */,
 			);
