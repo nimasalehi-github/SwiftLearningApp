@@ -1,23 +1,40 @@
-//
-//  ContentView.swift
-//  SwiftLearningApp
-//
-//  Created by Nima Salehi on 9/27/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    let dog = Dog(name: "Rex")
-    let cat = Cat(name: "Milo")
+    @State private var name: String = "Nima"
+    @State private var counter: Int = 0
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Hello, world!")
-            Text("Dog says: \(dog.speak())")
-            Text("Cat says: \(cat.speak())")
-            Text(cat.description)
-        }
-        .padding()
+        ScrollView {
+            VStack(spacing: 14) {
+
+                // TextField درست و بدون خطا
+                TextField("Enter your name", text: $name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
+                Text("My name is \(name)")
+                Text("Hello, \(name)! Welcome to SwiftUI")
+                    .foregroundColor(.blue)
+
+                Divider()
+
+                Text("Counter: \(counter)")
+                Button("Increase Counter") {
+                    counter += 1
+                }
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(8)
+
+            } // پایان VStack
+            .padding()
+        } // پایان ScrollView
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
