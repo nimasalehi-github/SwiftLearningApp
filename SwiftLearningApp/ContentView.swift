@@ -27,39 +27,39 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Stored Property → مقداری که مستقیم توی حافظه نگه‌داری میشه
+    // Stored Property
     var name: String = "Nima"
     
-    // Computed Property → هر بار که بهش دسترسی پیدا می‌کنیم محاسبه می‌شود
+    // Computed Property
     var greeting: String {
         return "Hello, \(name)! Welcome to SwiftUI"
     }
     
-    // Static Property → مربوط به خود struct هست، نه به نمونه (instance)
+    // Static Property
     static let appVersion: String = "1.0"
-
-
+    
+    // ✅ State Property
+    @State private var counter: Int = 0
     
     var body: some View {
-        VStack { // چندتا ویو رو عمودی می‌چینه
+        VStack {
             Text("Hello, world!")
-                .padding()
-            
-            // از پراپرتی استفاده می‌کنیم
             Text("My name is \(name)")
-            
-            Text(greeting)
-                .foregroundColor(.blue) // رنگ متن آبی شود
-
+            Text(greeting).foregroundColor(.blue)
             Text("App Version: \(ContentView.appVersion)")
                 .foregroundColor(.green)
-
+            
+            // ✅ استفاده از state
+            Text("Counter: \(counter)")
+                .font(.headline)
+                .padding(.top, 20)
+            
+            Button("Increase Counter") {
+                counter += 1 // با هر کلیک یکی زیاد میشه
+            }
+            .padding()
+            .background(Color.yellow)
+            .cornerRadius(8)
         }
-    }
-}
-
-struct Previews_ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
