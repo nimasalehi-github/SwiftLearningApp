@@ -26,20 +26,25 @@
 //}
 import SwiftUI
 
-struct ContentView: View {
-    // Stored Property
+struct ContentView: View, Describable {
     var name: String = "Nima"
     
-    // Computed Property
     var greeting: String {
         return "Hello, \(name)! Welcome to SwiftUI"
     }
     
-    // Static Property
     static let appVersion: String = "1.0"
     
-    // ✅ State Property
     @State private var counter: Int = 0
+    
+    // ✅ پیاده‌سازی پروتکل
+    var description: String {
+        return "This is a ContentView struct with name: \(name)"
+    }
+    
+    func details() -> String {
+        return "Counter is currently at \(counter)."
+    }
     
     var body: some View {
         VStack {
@@ -49,17 +54,25 @@ struct ContentView: View {
             Text("App Version: \(ContentView.appVersion)")
                 .foregroundColor(.green)
             
-            // ✅ استفاده از state
             Text("Counter: \(counter)")
                 .font(.headline)
                 .padding(.top, 20)
             
             Button("Increase Counter") {
-                counter += 1 // با هر کلیک یکی زیاد میشه
+                counter += 1
             }
             .padding()
             .background(Color.yellow)
             .cornerRadius(8)
+            
+            // ✅ نمایش داده‌های پروتکل
+            Text(description)
+                .foregroundColor(.purple)
+                .padding(.top, 20)
+            
+            Text(details())
+                .foregroundColor(.orange)
         }
     }
 }
+
